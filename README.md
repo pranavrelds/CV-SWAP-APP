@@ -60,6 +60,3 @@ http://localhost:5000/
 ## 🏭 Industrial Use-cases 
 1. Add effects to the photos
 2. Instagram and Snapchat filters
-
-## 👋 Conclusion
-We can create our own custom filter for the images and do our color grading using the cv2 library.
