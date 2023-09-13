@@ -28,6 +28,8 @@ The application identifies landmarks, forms triangles, and swaps faces from the 
 6. Replace the source image mask with the destination image.
 7. Smooth the swapped face for a natural look.
 
+Refer flowchart folder for more details
+
 ## Setup Instructions
 
 1. Create a new conda environment:
