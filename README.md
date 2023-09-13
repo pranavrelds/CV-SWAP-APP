@@ -1,62 +1,56 @@
 # CV-SWAP-APP
 
 
-# face-swap-app# Face Swap Application using Python and openCV
+# Face Swap Application with Python & OpenCV
 
-This is a flask-based application where we can swap the face of two people and have some fun with it. The model used is shape_predictor_68_face_landmarks of both the faces uploaded which gives us the 68 points landmarks of the face as shown.
+A Flask-based application that allows users to swap faces between two images. Utilizing the `shape_predictor_68_face_landmarks` model, the application identifies 68 facial landmarks to facilitate accurate face swapping.
 
-![Image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2PboABpNcPI6eOXyfu1xPi79tD2mm_XiAmTkzftxbhw&s)
+![Face Landmarks](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2PboABpNcPI6eOXyfu1xPi79tD2mm_XiAmTkzftxbhw&s)
 
-## Source image and Destination Image
-<img src="images/dst_img.jpg">
-<img src="images/src_img.jpg">
+## Sample Images
 
-## Generated image
-![Image](image.jpg)
+### Source and Destination Images
+![Source Image](images/src_img.jpg)
+![Destination Image](images/dst_img.jpg)
 
-later it marks the landmarks and swaps the faces with the destination image. It also can adjust if the face is sideways, color contrast, and the size of the image too.
+### Resultant Image
+![Swapped Image](image.jpg)
 
-## Steps Used
+The application identifies landmarks, forms triangles, and swaps faces from the source to the destination image. It also adjusts for face orientation, color contrast, and image size.
 
-1. Taking two images – one as the source and another as a destination.
-2. Using the dlib landmark detector on both these images. 
-3. Joining the dots in the landmark detector to form triangles. 
-4. Extracting these triangles
-5. Create the mask using these triangles
-5. Replacing the mask of the source image with the destination image
-6. Smoothening the face
+## Process Overview
 
+1. Input two images: source and destination.
+2. Detect facial landmarks using dlib.
+3. Form triangles by connecting the landmarks.
+4. Extract the triangles.
+5. Create a mask using the triangles.
+6. Replace the source image mask with the destination image.
+7. Smooth the swapped face for a natural look.
 
-## 🧑‍💻 How to setup
-create fresh conda environment 
+## Setup Instructions
+
+1. Create a new conda environment:
 ```python
 conda create -p venv python=3.7 -y
 ```
-activate conda environment
+2. Activate conda environment
 ```python
 conda activate venv/
 ```
-Install requirements
+3. Install requirements
 ```python
 pip install -r requirements.txt
 ```
-Run the web app
+4. Run the web app
 ```python
 python app.py
 ```
-To launch swagger ui
+5. Access application
 ```python
 http://localhost:5000/
 ```
 
-**<center> NOTE: upload the photos with frontal face. </center>**
-
-## 🧑‍💻 Tech Used
-1. computer vision
-2. dlib 
-3. openCV 
-4. Flask
-
-## 🏭 Industrial Use-cases 
+## Potential Industrial Applications 
 1. Add effects to the photos
 2. Instagram and Snapchat filters
